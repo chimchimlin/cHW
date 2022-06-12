@@ -1,0 +1,20 @@
+Abstract. We propose a new Patch-based Iterative Network (PIN) for
+fast and accurate landmark localisation in 3D medical volumes. PIN
+utilises a Convolutional Neural Network (CNN) to learn the spatial
+relationship between an image patch and anatomical landmark posi-
+tions. During inference, patches are repeatedly passed to the CNN un-
+til the estimated landmark position converges to the true landmark lo-
+cation. PIN is computationally ecient since the inference stage only
+selectively samples a small number of patches in an iterative fashion
+rather than a dense sampling at every location in the volume. Our ap-
+proach adopts a multi-task learning framework that combines regres-
+sion and classication to improve localisation accuracy. We extend PIN
+to localise multiple landmarks by using principal component analysis,
+which models the global anatomical relationships between landmarks.
+We have evaluated PIN using 72 3D ultrasound images from fetal screen-
+ing examinations. PIN achieves quantitatively an average landmark lo-
+calisation error of 5.59mm and a runtime of 0.44s to predict 10 land-
+marks per volume. Qualitatively, anatomical 2D standard scan planes
+derived from the predicted landmark locations are visually similar to
+the clinical ground truth. Source code is publicly available at https:
+//github.com/yuanwei1989/landmark-detection.
